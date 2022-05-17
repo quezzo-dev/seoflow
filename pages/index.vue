@@ -4,6 +4,7 @@
       src="https://telegram.org/js/telegram-widget.js?19"
       :data-telegram-login="BOT_USERNAME"
       data-size="medium"
+      :data-onauth="onTelegramAuth(user)"
       data-request-access="write")
   </div>
 </template>
@@ -15,7 +16,7 @@ export default {
     return {
       BOT_USERNAME: "gerchik_login_bot",
       BOT_TOKEN: "5295915260:AAEnm4WCPpYdK7T6pIA8uaGfdhTrh7sogFY",
-      REDIRECT_URI: "https://cheese-software.netlify.app/",
+      REDIRECT_URI: "https://profound-babka-6a3346.netlify.app/",
     };
   },
 

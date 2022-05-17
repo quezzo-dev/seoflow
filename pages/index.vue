@@ -21,7 +21,7 @@ export default {
   },
 
   mounted() {
-    // onTelegramAuth();
+    alert("upd");
   },
 
   methods: {

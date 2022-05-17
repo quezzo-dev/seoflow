@@ -1,17 +1,18 @@
 <template lang="pug">
-  <div>
+  .test
     script(
       src="https://telegram.org/js/telegram-widget.js?19"
       :data-telegram-login="BOT_USERNAME"
-      data-size="medium"
+      data-size="large"
       :data-onauth="onTelegramAuth(user)"
-      data-request-access="write")
-  </div>
+      data-request-access="write"
+      :data-auth-url="REDIRECT_URI")
+      
 </template>
 
 <script>
 export default {
-  name: "IndexPage",
+  // name: "IndexPage",
   data() {
     return {
       BOT_USERNAME: "gerchik_login_bot",
@@ -26,7 +27,7 @@ export default {
 
   methods: {
     onTelegramAuth(user) {
-      alert(
+      console.log(
         "Logged in as " +
           user.first_name +
           " " +
